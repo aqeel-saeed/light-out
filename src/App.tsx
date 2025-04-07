@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { GameBoard } from "./components/GameBoard";
 import { useGame } from "./hooks/useGame";
 import {
+  Send,
+  Facebook,
+  Linkedin,
+  Whatsapp,
   Lightbulb,
   RotateCcw,
   Trophy,
@@ -10,6 +14,8 @@ import {
   Moon,
   Sun,
   X,
+  MessageCircleCode,
+  Mail,
 } from "lucide-react";
 import { useTheme } from "./context/ThemeContext";
 
@@ -233,7 +239,6 @@ function App() {
             </button>
           </div>
         </div>
-
         {gameState.isWon && (
           <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
             <div
@@ -248,6 +253,63 @@ function App() {
             </div>
           </div>
         )}
+        <footer
+          className={`mt-8 text-sm text-center flex flex-col items-center gap-2 ${
+            theme === "dark" ? "text-gray-500" : "text-gray-600"
+          }`}
+        >
+          <p>
+            Made with <span className="text-red-500">♥</span> by{" "}
+            <span className="font-semibold">AQEEL</span>
+          </p>
+          <div className="flex gap-4">
+            <a
+              href="https://t.me/AqeelRaiee"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram"
+              className="hover:scale-110 transition-transform"
+            >
+              <Send size={18} className="hover:text-blue-400" />
+            </a>
+            <a
+              href="https://www.facebook.com/aqeel.saeed.raiee/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="hover:scale-110 transition-transform"
+            >
+              <Facebook size={18} className="hover:text-blue-600" />
+            </a>
+            <a
+              href="https://linkedin.com/in/aqeel-raiee"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:scale-110 transition-transform"
+            >
+              <Linkedin size={18} className="hover:text-blue-500" />
+            </a>
+            <a
+              href="https://wa.link/hv0lbz"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:scale-110 transition-transform"
+            >
+              <MessageCircleCode size={18} className="hover:text-blue-500" />
+            </a>
+            <a
+              href="mailto:aqeelraiee210@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:scale-110 transition-transform"
+            >
+              <Mail size={18} className="hover:text-blue-500" />
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   );
