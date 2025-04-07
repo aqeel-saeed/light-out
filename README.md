@@ -96,4 +96,4 @@ Contributions are welcome! Feel free to submit a Pull Request.
 
 ## 🌟 Live Demo
 
-You can try the game at: [Live Demo]
+You can try the game at: [Live Demo](https://light-out-aqeel.vercel.app)
